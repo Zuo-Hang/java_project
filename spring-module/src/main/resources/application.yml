@@ -1,0 +1,29 @@
+# Spring 模块配置文件
+
+spring:
+  application:
+    name: spring-module
+  # 允许循环依赖（仅用于 CircularDependencyDemo 演示，生产环境不推荐）
+  main:
+    allow-circular-references: true
+
+# BeanConfigurationPropertiesDemo 配置
+app:
+  demo:
+    name: demo-app
+    timeout: 60
+    nested:
+      enabled: true
+      path: /v1/api
+
+custom:
+  service:
+    endpoint: https://api.example.com
+    retries: 5
+
+# BeanConditionalDemo 配置
+feature:
+  cache:
+    enabled: true
+  audit:
+    enabled: true
